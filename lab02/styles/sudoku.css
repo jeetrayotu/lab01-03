@@ -8,8 +8,7 @@
 @media only screen and (min-width: 750px)
 {
     :root {
-        --cell-width: 50px;
-        --cell-height: 50px;
+        --cell-size: 50px;
     }
 
     /* Adapted From: https://www.w3schools.com/css/css_align.asp */
@@ -29,18 +28,26 @@
 @media only screen and (max-width: 750px)
 {
     :root {
-        --cell-width: 44px;
-        --cell-height: 39px;
+        --cell-size: 45px;
     }
 
-    #board {
+    /* #board {
         position: relative;
         left: 8%;
+    } */
+    #board {
+        display: flex;
+        margin: auto;
+        width: 86vw;
     }
 
     #numbers-palette {
-        position: relative;
-        left: 4.4%;
+        display: flex;
+        margin: auto;
+        width: 93vw;
+        height: 50vh;
+        /* position: relative;
+        left: 4.4%; */
     }
 }
 
@@ -49,8 +56,8 @@
     border: 0.5px solid black;
     
     /* Adapted From: https://chatgpt.com/share/67979b19-3e2c-8000-bb23-8c5b24a4a7c2 */
-    width: var(--cell-width);
-    height: var(--cell-height);
+    width: var(--cell-size);
+    height: var(--cell-size);
     /* width: 49px; */
 
     font-size: var(--font-size);
