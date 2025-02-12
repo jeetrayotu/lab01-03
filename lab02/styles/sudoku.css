@@ -1,0 +1,208 @@
+@import "common.css";
+
+:root {
+    --font-size: 30px;
+}
+
+/* Adapted From: https://github.com/sylvorg/bundle/blob/main/src/styles/primary/syvl.css */
+@media only screen and (min-width: 750px)
+{
+    :root {
+        --cell-width: 50px;
+        --cell-height: 50px;
+    }
+
+    /* Adapted From: https://www.w3schools.com/css/css_align.asp */
+    #board {
+        margin: auto;
+        width: 35%;
+    }
+
+    /* Adapted From: https://www.w3schools.com/css/css_align.asp */
+    #numbers-palette {
+        margin: auto;
+        width: 38%;
+    }
+}
+
+/* Adapted From: https://github.com/sylvorg/bundle/blob/main/src/styles/primary/syvl.css */
+@media only screen and (max-width: 750px)
+{
+    :root {
+        --cell-width: 44px;
+        --cell-height: 39px;
+    }
+
+    #board {
+        position: relative;
+        left: 8%;
+    }
+
+    #numbers-palette {
+        position: relative;
+        left: 4.4%;
+    }
+}
+
+
+.cell {
+    border: 0.5px solid black;
+    
+    /* Adapted From: https://chatgpt.com/share/67979b19-3e2c-8000-bb23-8c5b24a4a7c2 */
+    width: var(--cell-width);
+    height: var(--cell-height);
+    /* width: 49px; */
+
+    font-size: var(--font-size);
+    text-align: center;
+}
+/* Adapted From:
+Answer 1: https://stackoverflow.com/a/9266691
+User 1: https://stackoverflow.com/users/560299/ibu
+Answer 2: https://stackoverflow.com/a/676332
+User 2: https://stackoverflow.com/posts/676332/revisions */
+.cell:hover {
+    background-color:#f5dd90;
+}
+/* .cell > img {
+    padding-top: 8px;
+} */
+
+.user-input {
+    background-color: #f2f2f2;
+}
+
+.error {
+    background-color: #f76c5e;
+}
+
+/* Adapted From:
+Answer: https://stackoverflow.com/a/4940734/10827766
+User: https://stackoverflow.com/users/101290/beau-smith */
+.board-parent {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    float: left;
+    padding-top: 40px;
+}
+
+/* Adapted From:
+Answer 1: https://stackoverflow.com/a/4940734/10827766
+User 1: https://stackoverflow.com/users/101290/beau-smith
+Answer 2: https://stackoverflow.com/a/40676881
+User 2: https://stackoverflow.com/users/4707499/mudassar-saiyed
+Answer 3: https://stackoverflow.com/a/48013407
+User 3: https://stackoverflow.com/users/448625/caner */
+.numbers-palette-parent {
+    position: relative;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: auto auto auto;
+    float: left;
+}
+
+#numbers-palette {
+    position: relative;
+}
+
+/* board-row-column */
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-0-0 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
+    border-left: 3px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-0-1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-0-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 3px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-1-0 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    border-left: 3px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-1-1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-1-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 3px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-2-0 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-2-1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-2-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 1px solid black;
+    border-right: 3px solid black;
+    /* padding: 5px; */
+}

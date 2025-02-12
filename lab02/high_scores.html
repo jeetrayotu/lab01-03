@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku - High Scores</title>
+    <!-- Adapted From: https://www.w3schools.com/html/html_css.asp -->
+    <link rel="stylesheet" href="styles/high_scores.css">
+    <!-- reference your source code here -->
+
+    <!-- Adapted From: Lecture 6 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Adapted From: Lecture 6 -->
+    <!-- navbar colours: https://bulma.io/documentation/components/navbar/#colors -->
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <!-- navbar-brand -->
+        <div class="navbar-brand">
+            <!-- navbar-item -->
+            <a class="navbar-item" href="#">
+                <img src="images/logo.gif" width="50" height="35" alt="Sudoku Logo" />
+            </a>
+
+            <p class="navbar-item pl-6">Sudoku Center</p>
+            
+            <!-- navbar-burger -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="false"></span>
+                <span aria-hidden="false" style="color:white"></span>
+                <span aria-hidden="false"></span>
+                <span aria-hidden="false"></span>
+            </a>
+        </div>
+
+
+        <!-- navbar-menu -->
+        <div id="navbarBasicExample" class="navbar-menu">
+            <!-- nav-Start -->
+            <div class="navbar-start">
+                <!-- Item 1: Home -->
+                <a class="navbar-item" href="sudoku.html">Play Game</a>
+                <a class="navbar-item" href="high_scores.html">High Scores</a>
+            </div>
+
+            <!-- nav-End -->
+            <div class="navbar-end"></div>
+        </div>
+    </nav>
+
+    <table>
+        
+    </table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+
+/* Adapted From:
+Answer: https://stackoverflow.com/a/46188431
+User: https://stackoverflow.com/users/7960598/jake-ceballos */
+body {
+    background-color: white;
+    height: 100%;
+    color: black;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.navbar-item, .navbar-item > a {
+    color: white;
+}
+
+.navbar-brand > a:hover, .navbar-item > a:hover, .navbar-start > a:hover {
+    background-color: unset;
+    color: cyan;
+}
+
+.navbar-burger > span {
+    color: grey;
+}
+
+.navbar-menu {
+    background-color: black;
+}
