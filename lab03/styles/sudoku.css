@@ -15,14 +15,14 @@
     #board {
         display: flex;
         margin: auto;
-        width: 40vw;
+        width: 35vw;
     }
 
     /* Adapted From: https://www.w3schools.com/css/css_align.asp */
     #numbers-palette {
         display: flex;
         margin: auto;
-        width: 43.2vw;
+        width: 38vw;
     }
 }
 
@@ -49,7 +49,7 @@
 }
 
 
-.cell {
+.board-cell, .numbers-palette-cell {
     border: 0.5px solid black;
     
     /* Adapted From: https://chatgpt.com/share/67979b19-3e2c-8000-bb23-8c5b24a4a7c2 */
@@ -59,12 +59,13 @@
     font-size: var(--font-size);
     text-align: center;
 }
+
 /* Adapted From:
 Answer 1: https://stackoverflow.com/a/9266691
 User 1: https://stackoverflow.com/users/560299/ibu
 Answer 2: https://stackoverflow.com/a/676332
 User 2: https://stackoverflow.com/posts/676332/revisions */
-.cell:hover {
+.board-cell:hover, .numbers-palette-cell:hover {
     background-color:#f5dd90;
 }
 /* .cell > img {
@@ -112,56 +113,12 @@ User 3: https://stackoverflow.com/users/448625/caner */
 /* board-row-column */
 
 /* Adapted From: https://www.w3schools.com/css/css_grid.asp */
-.board-0-0 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-top: 3px solid black;
-    border-bottom: 2px solid black;
-    border-left: 3px solid black;
-    border-right: 1px solid black;
-    /* padding: 5px; */
-}
-
-/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
-.board-0-1 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-top: 3px solid black;
-    border-bottom: 2px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    /* padding: 5px; */
-}
-
-/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
-.board-0-2 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-top: 3px solid black;
-    border-bottom: 2px solid black;
-    border-left: 1px solid black;
-    border-right: 3px solid black;
-    /* padding: 5px; */
-}
-
-/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
-.board-1-0 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-top: 1px solid black;
-    border-bottom: 2px solid black;
-    border-left: 3px solid black;
-    border-right: 1px solid black;
-    /* padding: 5px; */
-}
-
-/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
 .board-1-1 {
     display: grid;
     grid-template-columns: auto auto auto;
-    border-top: 1px solid black;
+    border-top: 3px solid black;
     border-bottom: 2px solid black;
-    border-left: 1px solid black;
+    border-left: 3px solid black;
     border-right: 1px solid black;
     /* padding: 5px; */
 }
@@ -170,6 +127,50 @@ User 3: https://stackoverflow.com/users/448625/caner */
 .board-1-2 {
     display: grid;
     grid-template-columns: auto auto auto;
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-1-3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 3px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-2-1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    border-left: 3px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-2-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    /* padding: 5px; */
+}
+
+/* Adapted From: https://www.w3schools.com/css/css_grid.asp */
+.board-2-3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
     border-top: 1px solid black;
     border-bottom: 2px solid black;
     border-left: 1px solid black;
@@ -178,7 +179,7 @@ User 3: https://stackoverflow.com/users/448625/caner */
 }
 
 /* Adapted From: https://www.w3schools.com/css/css_grid.asp */
-.board-2-0 {
+.board-3-1 {
     display: grid;
     grid-template-columns: auto auto auto;
     border-top: 1px solid black;
@@ -189,7 +190,7 @@ User 3: https://stackoverflow.com/users/448625/caner */
 }
 
 /* Adapted From: https://www.w3schools.com/css/css_grid.asp */
-.board-2-1 {
+.board-3-2 {
     display: grid;
     grid-template-columns: auto auto auto;
     border-top: 1px solid black;
@@ -200,7 +201,7 @@ User 3: https://stackoverflow.com/users/448625/caner */
 }
 
 /* Adapted From: https://www.w3schools.com/css/css_grid.asp */
-.board-2-2 {
+.board-3-3 {
     display: grid;
     grid-template-columns: auto auto auto;
     border-top: 1px solid black;
